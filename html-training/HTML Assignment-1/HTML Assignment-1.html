@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">HTML Tags Demonstration</h1>
+    <h2 style="text-align:center;">Text size tags</h2>
+    <h1>This is the H1 Tag</h1>
+    <h2>Can &lt;h2&gt;</h2>
+    <h3>Be &lt;h3&gt;</h3>
+    <h4>Written &lt;h4&gt;</h4>
+    <h5>Upto &lt;h5&gt;</h5>
+    <h6>H6 &lt;h6&gt;</h6>
+    <p>This is a paragraph tag. Paragraphs are used to group sentences and provide structure to the text content on a webpage.</p>
+    <hr>
+    <h2 style="text-align:center;">Font style tags</h2>
+    <p>To display text in <b>bold</b> &lt;b&gt; tag is used</p>
+    <p>To display text in <i>italic</i> &lt;i&gt; tag is used</p>
+    <p>To display text in <u>underline</u> &lt;u&gt; tag is used</p>
+    <p>To display text in <mark>highlighted</mark> &lt; mark&gt; tag is used</p>
+    <p>To display text in <small>small</small> &lt; small&gt; tag is used</p>
+    <p>To display text in <del>deleted</del> &lt; del&gt; tag is used</p>
+    <p>To display text in <ins>inserted</ins> &lt; ins&gt; tag is used</p>
+    <p>To display tag in <sub>subscript</sub > &lt; sub&gt; tag is used<>
+    <p>To display tag in <sup>superscript</sup> &lt; sup&gt; tag is used</p>
+
+    <hr>
+    <h2 style="text-align:center;">List Tags</h2>
+    <h3>Ordered List &lt;ol&gt; tag</h3>
+    <ol type="1" start="1">
+        <li >List item 1 defined using &lt;li&gt; tag</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+    <h3>Unordered List &lt;ul&gt; tag</h3>
+    <ul>
+        <li>List item A</li>
+        <li>List item B</li>
+        <li>List item C</li>
+    </ul>
+    <dl>
+    <h3>Definition List &lt;dl&gt; tag </h3>
+  <dt>Coffee (Definition Term &lt;dt&gt; tag)</dt>
+  <dd>Black hot drink, typically served in a mug. (Definition Description &lt;dd&gt; tag)</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink.</dd>
+  <dt>HTML</dt>
+  <dd>Hyper Text Markup Language.</dd>
+</dl>
+<hr>
+<h2 style="text-align:center">Link and Media tags</h2>
+<h3>Anchor tag</h3>
+<p>To create a hyperlink, the &lt;a&gt; tag is used. Example:</p>
+<a href="https://www.thehartford.com/">Link to The Hartford Website </a><br>
+<a href="https://www.thehartford.com/" target="_blank">Link to The Hartford Website in a new tab</a>
+<h3>Image tag</h3>
+<p>To include an image using the &lt;i&gt; tag</p>
+<img src="https://t3.ftcdn.net/jpg/04/58/15/98/360_F_458159848_gL0H2ldDg2j25OGCpgjrWYymGNI5MK8I.jpg" alt="Image Unavailable"><br>
+<h2>Audio Tag</h2>
+<p>To include an image using the &lt;audio&gt; tag</p>
+<audio controls src="./daytime_forrest_bonfire.ogg"></audio>
+<h2>Video Tag</h2>
+<p>To include an image using the &lt;video&gt; tag</p>
+<video controls style="height:200px;"src="./4074364-hd_1280_720_25fps.mp4"></video>
+<hr>
+<h2 style="text-align:center;">Tags for Creating Table</h2>
+<h3>Tables can be creates using the &lt;table&gt; tag</h3>
+<table style="border:1px solid black;">
+    <thead>
+        <tr >
+            <th style="border:1px solid black;">Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dustin</td>
+            <td>19</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>21</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Eleven</td>
+            <td>20</td>
+            <td>Female</td>
+        </tr>
+    </tbody>
+</table>
+<p>The structure of a table is</p>
+<ul>
+    <li>&lt;table&gt;: Defines the table</li>
+    <li>&lt;thead&gt;: Defines the table header section</li>
+    <li>&lt;tbody&gt;: Defines the table body section</li>
+    <li>&lt;tr&gt;: Defines a table row</li>
+    <li>&lt;th&gt;: Defines a header cell in a table</li>
+    <li>&lt;td&gt;: Defines a standard cell in a table</li>
+    </ul>
+<hr>
+<h2 style="text-align:center;">Tags for creating a form</h2>
+<h3>Forms can be created using the &lt;form&gt; tag</h3>
+
+<form style="border:1px solid black; padding:15px; width:300px;">
+    <label>Name:</label><br>
+    <input type="text"><br><br>
+
+    <label>Age:</label><br>
+    <input type="number"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female<br><br>
+
+    <label>Skills:</label><br>
+    <input type="checkbox"> HTML
+    <input type="checkbox"> CSS<br><br>
+
+    <label>City:</label><br>
+    <select>
+        <option>Hyderabad</option>
+        <option>Bangalore</option>
+        <option>Chennai</option>
+    </select><br><br>
+
+    <button >Submit</button>
+</form>
+
+<p>The structure of a form is</p>
+<ul>
+    <li>&lt;form&gt;: Defines the form</li>
+    <li>&lt;label&gt;: Defines a label for input fields</li>
+    <li>&lt;input&gt;: Used to take user input</li>
+    <li>&lt;radio&gt;: Used to select one option</li>
+    <li>&lt;checkbox&gt;: Used to select multiple options</li>
+    <li>&lt;select&gt;: Creates a dropdown list</li>
+    <li>&lt;option&gt;: Defines options inside dropdown</li>
+    <li>&lt;button&gt;: Submits the form</li>
+</ul>
+<hr>
+<h2 style="text-align:center">Question-2 Named Anchor</h2>
+<h2>College Departments – Named Anchor Demonstration</h2>
+
+<h4>
+    <b>Quick Navigation:</b><br>
+    <a href="#cse">Computer Science</a> <br>
+    <a href="#ece">Electronics</a> <br>
+    <a href="#mech">Mechanical</a><br>
+</h4>
+
+<hr>
+
+<h4>
+    This webpage demonstrates the use of named anchors in HTML.
+    Named anchors help users navigate within the same webpage.
+    They are especially useful when the webpage contains large content.
+    Instead of scrolling manually, users can jump to sections directly.
+    This improves usability and user experience.
+    Named anchors are commonly used in documentation pages.
+    They are also useful in FAQs and long articles.
+    In this example, department sections are linked.
+    Each section contains detailed information.
+    Clicking a link scrolls the page automatically.
+</h4>
+
+<h4>
+    The following sections describe different engineering departments.
+    Each department is represented using a named anchor.
+    The anchor is linked using the href attribute.
+    Classes are used only for styling and grouping.
+    Navigation does not work using class alone.
+    The name attribute enables scrolling behavior.
+    Enough content is added for visible scrolling.
+    This makes the demonstration clear and effective.
+    Such examples are commonly asked in practical exams.
+    This format is ideal for lab records and viva.
+</h4>
+
+<hr>
+
+<!-- CSE SECTION -->
+<a name="cse" class="cse"></a>
+<h3>Computer Science Engineering (CSE)</h3>
+
+<h4>
+    The Computer Science Engineering department focuses on computing technologies.
+    It covers subjects such as programming, data structures, and algorithms.
+    Students learn problem solving and logical thinking skills.
+    Programming languages like C, C++, Java, and Python are taught.
+    The department also includes subjects like operating systems.
+    Database management systems are a core part of the curriculum.
+    Web development and software engineering are also emphasized.
+    Modern topics include artificial intelligence and machine learning.
+    Students work on real-world projects and applications.
+    This prepares them for careers in the IT industry.
+</h4>
+
+<h4>
+    The CSE department offers excellent career opportunities.
+    Graduates can work as software engineers and developers.
+    Many students choose roles in data science and analytics.
+    Some pursue higher education and research.
+    The department encourages innovation and creativity.
+    Hackathons and coding contests are regularly conducted.
+    Industry internships provide practical exposure.
+    Students gain both theoretical and practical knowledge.
+    Teamwork and communication skills are also developed.
+    This makes CSE one of the most popular engineering branches.
+</h4>
+
+<hr>
+
+<!-- ECE SECTION -->
+<a name="ece" class="department ece"></a>
+<h3>Electronics and Communication Engineering (ECE)</h3>
+
+<h4>
+    The Electronics and Communication Engineering department focuses on electronics.
+    It includes the study of circuits and electronic devices.
+    Communication systems form a major part of the syllabus.
+    Students learn about analog and digital communication.
+    Signal processing is another important subject.
+    The department also covers embedded systems.
+    Microcontrollers and microprocessors are taught in detail.
+    Students gain knowledge of VLSI design.
+    IoT and wireless communication are emerging areas.
+    Practical lab work supports theoretical learning.
+</h4>
+
+<h4>
+    ECE graduates have diverse career opportunities.
+    They can work in electronics and telecom industries.
+    Many jobs are available in embedded systems companies.
+    Students can work in semiconductor industries.
+    Some graduates enter government and PSU sectors.
+    Research and higher studies are also popular choices.
+    The department focuses on hands-on learning.
+    Industrial visits are regularly organized.
+    Technical workshops enhance practical skills.
+    ECE plays a crucial role in modern technology.
+</h4>
+
+<hr>
+
+<!-- MECH SECTION -->
+<a name="mech" class="department mech"></a>
+<h3>Mechanical Engineering</h3>
+
+<h4>
+    Mechanical Engineering is one of the oldest engineering branches.
+    It focuses on design and manufacturing of mechanical systems.
+    Core subjects include thermodynamics and fluid mechanics.
+    Manufacturing processes are studied in detail.
+    Students learn about machines and mechanical design.
+    Strength of materials is an important subject.
+    Robotics and automation are modern additions.
+    CAD and CAM tools are widely used.
+    Practical workshops form a major part of learning.
+    The branch is essential for industrial development.
+</h4>
+
+<h4>
+    Mechanical engineers work in various industries.
+    They are employed in automotive and aerospace sectors.
+    Power plants and manufacturing industries hire graduates.
+    Many work in design and production roles.
+    Some engineers choose careers in research.
+    Higher studies are also a common option.
+    Mechanical engineers contribute to infrastructure development.
+    Innovation and problem solving are key skills.
+    The branch offers stable and diverse career paths.
+    Mechanical engineering remains highly relevant today.
+</h4>
+<hr>
+<h2 style="text-align:center;">Question-3 Image Mapping</h2>
+
+<h4>The marked areas are Germany,France,Italy,Switzerland Spain</h4>
+
+<img src="./Europe Political Map.jpg" 
+
+     alt="Political map of Europe" 
+     usemap="#europemap">
+
+<map name="europemap">
+    <area shape="poly"
+          coords="409,395,427,386,424,351,423,329,406,323,394,329,384,317,374,310,370,318,375,329,362,333,349,329,343,345,339,356,331,369,326,377,327,388,330,399,333,409,342,417,335,427,334,439,347,439,358,443,370,450,383,450,397,448,406,438,416,432,411,422,402,413,397,397,429,369"
+          href="https://www.google.com/search?q=Germany"
+          title="Germany"
+          alt="Germany"
+          target="_blank">
+
+          <area shape="poly" coords="318,449,329,443,342,443,352,440,360,449,361,457,360,465,351,460,348,471,343,462,335,468,328,471,321,466,313,462" title="" href="https://www.google.com/search?q=Switzerland" title="Switzerland" alt="Switzerland" target="_blank">
+
+          <area shape="poly" coords="315,502,317,490,320,477,332,472,341,463,347,472,352,464,362,465,369,459,378,463,388,459,396,468,405,470,409,478,405,487,396,490,388,495,391,502,389,510,392,517,398,523,405,532,408,545,419,557,434,561,438,570,448,575,456,583,466,590,469,598,456,592,447,592,441,600,446,608,448,616,441,622,440,629,432,635,431,621,432,606,422,596,413,582,398,572,384,562,367,542,374,549,360,528,356,514,344,506,334,509,324,513" href="https://www.google.com/search?q=Italy" title="Italy" alt="Italy" target="_blank">
+
+          <area shape="poly" coords="187,385,190,393,188,400,197,406,208,414,211,424,214,436,215,451,208,467,203,485,200,497,209,507,222,512,234,517,245,525,257,526,262,514,271,510,281,510,290,516,299,522,308,521,319,514,324,507,316,502,317,492,315,484,319,476,320,466,309,462,316,455,322,448,328,443,335,435,338,426,344,419,332,407,322,403,312,397,309,387,299,384,292,372,286,364,275,365,270,376,260,381,251,384,240,385,228,375,228,386,220,394,210,391,202,385" title="" href="https://www.google.com/search?q=France" target="_blank">
+
+          <area shape="poly" coords="94,462,110,462,123,462,140,469,153,476,170,482,182,487,195,493,204,501,215,510,226,512,240,518,248,524,258,527,253,536,240,544,227,544,218,550,206,558,199,569,197,577,199,585,191,592,181,599,168,603,158,612,139,608,120,605,103,609,96,597,88,585,88,570,93,556,100,546,95,535,107,528,112,518,122,509,120,496,104,492,91,487,96,472" title="" href="https://www.google.com/search?q=Spain" target="_blank">
+</map>
+<hr>
+
+
+</body>
+</html>
