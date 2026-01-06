@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        table{
+            border-collapse: collapse;
+            width: 60%;
+            margin: auto;
+            background-color: #fafafa;
+        }
         th,td{
             border:1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        thead{
+            background-color: lightgray;
+        }
+        ul{
+            list-style-type: square;
+        }
+        img{
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        audio, video{
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        form{
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+        input, select{
+            padding: 5px;
+        }
+        input:focus{
+            outline: 2px solid blue;
+        }
+        button{
+            padding: 8px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: darkgreen;
+        }
+        hr{
+            height: 2px;
+            background-color: black;
+            border: none;
         }
     </style>
+
 </head>
 <body>
     <h1 style="text-align:center;">HTML Tags Demonstration</h1>
@@ -69,7 +119,7 @@
 <audio controls src="./Audio files/daytime_forrest_bonfire.ogg"></audio>
 <h2>Video Tag</h2>
 <p>To include an image using the &lt;video&gt; tag</p>
-<video controls style="height:200px;" src="./Videos/4074364-hd_1280_720_25fps.mp4"></video>
+<video controls style="height:200px;"src="./Videos/4074364-hd_1280_720_25fps.mp4"></video>
 <hr>
 <h2 style="text-align:center;">Tags for Creating Table</h2>
 <h3>Tables can be creates using the &lt;table&gt; tag</h3>
@@ -111,8 +161,8 @@
 <hr>
 <h2 style="text-align:center;">Tags for creating a form</h2>
 <h3>Forms can be created using the &lt;form&gt; tag</h3>
-
-<form style="border:1px solid black; padding:15px; width:300px;">
+<div class="forform">
+<form style="border:1px solid black; padding:15px; width:300px; ">
     <label>Name:</label><br>
     <input type="text"><br><br>
 
@@ -136,7 +186,7 @@
 
     <button >Submit</button>
 </form>
-
+</div>
 <p>The structure of a form is</p>
 <ul>
     <li>&lt;form&gt;: Defines the form</li>

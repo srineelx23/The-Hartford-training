@@ -1,0 +1,43 @@
+ body{
+    font-family: Arial, sans-serif;
+    background-color: #847f7f5b;
+    color: #333;
+    line-height: 1.6;
+}
+h1{
+    color: darkred;
+    text-transform: uppercase;
+}
+
+h2{ color: darkblue; 
+}
+
+h3{ color: brown; 
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+h4{
+    max-height: 120px;
+    overflow: auto;
+}
+p{
+    font-size: 15px;
+    text-align: justify;
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.forform{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
