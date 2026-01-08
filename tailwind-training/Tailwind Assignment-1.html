@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>E-commerce Page</title>
+</head>
+<body class="" >
+<div class="relative min-h-screen bg-[url('./Images/landingpage.jpg')] bg-cover bg-center">
+
+<!-- NAVBAR -->
+<div class="relative md:absolute md:top-6 left-0 right-0 flex justify-center w-full z-20">
+
+  <div
+    class="bg-black text-white
+           w-[90%] md:w-[70%]
+           px-8 md:px-15 py-4 md:py-6
+           flex flex-col md:flex-row
+           justify-between items-center
+           gap-4 md:gap-0
+           shadow-[0_0_15px_#00f2ff,0_0_30px_#00f2ff]
+           transition-all duration-300 ease-out
+           hover:shadow-[0_0_25px_#00f2ff,0_0_50px_#00f2ff]
+           hover:-translate-y-1"
+    style="clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 8% 100%);"
+  >
+    <!-- Logo -->
+    <div class="logo font-bold text-lg text-cyan-300">
+      ShoppingDoneRight
+    </div>
+
+    <!-- Menu -->
+    <div class="menu flex flex-col md:flex-row gap-4 md:gap-6 items-center">
+      <h1 class="cursor-pointer transition-colors duration-200 hover:text-cyan-300">Home</h1>
+      <h1 class="cursor-pointer transition-colors duration-200 hover:text-cyan-300">Products</h1>
+      <h1 class="cursor-pointer transition-colors duration-200 hover:text-cyan-300">Login</h1>
+      <h1 class="cursor-pointer transition-colors duration-200 hover:text-cyan-300">Cart</h1>
+    </div>
+  </div>
+</div>
+
+
+<!-- HERO CONTENT (TEXT + CARDS) -->
+<div
+  class="relative md:top-32 md:left-0 md:right-0 z-10
+         flex flex-col md:flex-row
+         items-center md:items-start
+         justify-end-safe md:justify-between
+         gap-20
+         px-6 md:px-32"
+>
+
+
+  <!-- LEFT SIDE TEXT -->
+  <div class="max-w-md text-center md:text-left bg-white/30 backdrop-blur-lg p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl md:text-5xl text-black font-extrabold leading-tight ">
+      Shop Smarter,<br />
+      Not Harder
+    </h1>
+
+    <p class="mt-4 text-base md:text-lg text-black font-semibold">
+      Discover top categories, hand-picked products, and unbeatable deals —
+      all in one place.
+    </p>
+
+    <button
+      class="mt-6 px-8 py-3 bg-cyan-500 text-black font-semibold rounded-full
+             transition-all duration-300 hover:bg-cyan-400 hover:scale-105"
+    >
+      Explore Now
+    </button>
+  </div>
+
+  <!-- RIGHT SIDE CATEGORY CARDS -->
+  <div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+      <!-- CARD 1 -->
+      <div
+        class="group w-48 h-56 bg-white/90 backdrop-blur-md rounded-xl overflow-hidden
+               shadow-lg transition-all duration-300 ease-out
+               hover:scale-105 hover:shadow-[0_0_20px_rgba(0,242,255,0.6)]"
+      >
+        <img src="./Images/cat1.jpg"
+             class="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="p-3 text-center">
+          <h2 class="font-semibold group-hover:text-cyan-600 transition-colors duration-200">
+            Electronics
+          </h2>
+        </div>
+      </div>
+
+      <!-- CARD 2 (ZIG-ZAG ONLY ON DESKTOP) -->
+      <div
+        class="group w-48 h-56 bg-white/90 backdrop-blur-md rounded-xl overflow-hidden
+               shadow-lg transition-all duration-300 ease-out
+               hover:scale-105 hover:shadow-[0_0_20px_rgba(0,242,255,0.6)]"
+      >
+        <img src="./Images/cat2.jpg"
+             class="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="p-3 text-center">
+          <h2 class="font-semibold group-hover:text-cyan-600 transition-colors duration-200">
+            Fashion
+          </h2>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div
+        class="group w-48 h-56 bg-white/90 backdrop-blur-md rounded-xl overflow-hidden
+               shadow-lg transition-all duration-300 ease-out
+               hover:scale-105 hover:shadow-[0_0_20px_rgba(0,242,255,0.6)]"
+      >
+        <img src="./Images/cat3.jpg"
+             class="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="p-3 text-center">
+          <h2 class="font-semibold group-hover:text-cyan-600 transition-colors duration-200">
+            Home Decor
+          </h2>
+        </div>
+      </div>
+
+      <!-- CARD 4 (ZIG-ZAG ONLY ON DESKTOP) -->
+      <div
+        class="group w-48 h-56 bg-white/90 backdrop-blur-md rounded-xl overflow-hidden
+               shadow-lg transition-all duration-300 ease-out
+               hover:scale-105 hover:shadow-[0_0_20px_rgba(0,242,255,0.6)]"
+      >
+        <img src="./Images/cat4.jpg"
+             class="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="p-3 text-center">
+          <h2 class="font-semibold group-hover:text-cyan-600 transition-colors duration-200">
+            Groceries
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-40 z-0
+            bg-gradient-to-b from-transparent to-white">
+</div>
+</div>
+ <div class="mt-10 px-10">
+    <h1 class="text-3xl font-bold">Our Products</h1>
+
+    <!-- ================= ELECTRONICS ================= -->
+    <div class="mt-8 w-full">
+      <h2 class="text-2xl font-semibold mb-4">Electronics</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/prod-phone.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Smartphone</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Fast performance with stunning display</p>
+            <p class="text-xl font-bold mt-3">₹19,999</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/prod-laptop.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Laptop</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Lightweight and powerful for daily tasks</p>
+            <p class="text-xl font-bold mt-3">₹59,999</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/prod-headphones.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Headphones</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Immersive sound with noise isolation</p>
+            <p class="text-xl font-bold mt-3">₹3,499</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/prod-watch.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Smart Watch</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Track fitness and notifications easily</p>
+            <p class="text-xl font-bold mt-3">₹7,999</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= FASHION ================= -->
+    <div class="mt-14 w-full">
+      <h2 class="text-2xl font-semibold mb-4">Fashion</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/fashion-tshirt.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">T-Shirt</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Comfortable cotton everyday wear</p>
+            <p class="text-xl font-bold mt-3">₹799</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/fashion-jeans.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Jeans</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Slim fit stretch denim</p>
+            <p class="text-xl font-bold mt-3">₹1,999</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/fashion-jacket.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Jacket</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Stylish winter essential</p>
+            <p class="text-xl font-bold mt-3">₹3,499</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/fashion-shoes.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Shoes</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Durable and comfortable footwear</p>
+            <p class="text-xl font-bold mt-3">₹2,799</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= HOME ESSENTIALS ================= -->
+    <div class="mt-14 mb-24">
+      <h2 class="text-2xl font-semibold mb-4">Home Essentials</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/home-chair.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Chair</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Ergonomic wooden chair</p>
+            <p class="text-xl font-bold mt-3">₹4,499</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/home-table.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Table</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Minimal dining table</p>
+            <p class="text-xl font-bold mt-3">₹9,999</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/home-lamp.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Lamp</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Warm ambient lighting</p>
+            <p class="text-xl font-bold mt-3">₹1,499</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-xl transition min-w-[260px]">
+          <img src="./Images/home-sofa.jpg"
+               class="w-full h-[180px] sm:h-44 min-h-[180px] object-cover rounded-t-xl block">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Sofa</h3>
+            <p class="text-sm text-gray-600 mt-1 truncate">Premium comfort seating</p>
+            <p class="text-xl font-bold mt-3">₹24,999</p>
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 bg-cyan-500 text-white py-2 rounded">Buy Now</button>
+              <button class="flex-1 border border-cyan-500 text-cyan-500 py-2 rounded">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= WHY SHOP FROM US ================= -->
+<div class="bg-white py-20 ">
+  <div class="px-10 max-w-7xl mx-auto">
+
+    <h2 class="text-3xl font-bold text-center mb-4">
+      Why Shop From Us
+    </h2>
+
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+      We are committed to delivering quality products, fast service, and a seamless shopping experience.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="bg-gray-50 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <svg class="w-10 h-10 text-cyan-500" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857M12 12a4 4 0 100-8 4 4 0 000 8z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-cyan-500">1M+</h3>
+        <p class="mt-2 font-semibold">Happy Customers</p>
+        <p class="text-sm text-gray-600 mt-1">
+          Trusted by shoppers nationwide
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-gray-50 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <svg class="w-10 h-10 text-cyan-500" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 10h11l4 8H7l-4-8zM7 10V6a5 5 0 0110 0v4" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-cyan-500">99%</h3>
+        <p class="mt-2 font-semibold">On-Time Delivery</p>
+        <p class="text-sm text-gray-600 mt-1">
+          Reliable and fast shipping
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-gray-50 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <svg class="w-10 h-10 text-cyan-500" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M18 10c0 3.866-3.582 7-8 7a8.967 8.967 0 01-4-.93L2 17l1.93-4A8.967 8.967 0 012 9c0-3.866 3.582-7 8-7s8 3.134 8 7z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-cyan-500">24/7</h3>
+        <p class="mt-2 font-semibold">Customer Support</p>
+        <p class="text-sm text-gray-600 mt-1">
+          Assistance anytime you need
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="bg-gray-50 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <svg class="w-10 h-10 text-cyan-500" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12l2 2 4-4M12 22a10 10 0 100-20 10 10 0 000 20z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-cyan-500">7 Days</h3>
+        <p class="mt-2 font-semibold">Easy Returns</p>
+        <p class="text-sm text-gray-600 mt-1">
+          Simple and hassle-free returns
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= NEWSLETTER SIGNUP ================= -->
+<div class="bg-gray-900 py-20 mt-20">
+  <div class="max-w-5xl mx-auto px-10 text-center text-white">
+
+    <!-- Icon -->
+    <div class="flex justify-center mb-6">
+      <svg class="w-12 h-12 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    </div>
+
+    <h2 class="text-3xl font-bold mb-4">
+      Subscribe to Our Newsletter
+    </h2>
+
+    <p class="text-gray-300 max-w-2xl mx-auto mb-10">
+      Get updates on new products, exclusive offers, and special discounts
+      delivered straight to your inbox.
+    </p>
+
+    <!-- FIXED FORM -->
+    <form class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+      <input
+        type="email"
+        placeholder="Enter your email address"
+        class="w-full px-5 py-3 rounded-lg
+               bg-white text-gray-900
+               border border-gray-300
+               placeholder-gray-500
+               focus:outline-none focus:ring-2 focus:ring-cyan-400"
+        required
+      />
+      <button
+        type="submit"
+        class="bg-cyan-500 hover:bg-cyan-600 transition
+               text-white px-8 py-3 rounded-lg font-semibold"
+      >
+        Subscribe
+      </button>
+    </form>
+    <p class="text-sm text-gray-400 mt-6">
+      We respect your privacy. Unsubscribe anytime.
+    </p>
+  </div>
+</div>
+</body>
+</html>
