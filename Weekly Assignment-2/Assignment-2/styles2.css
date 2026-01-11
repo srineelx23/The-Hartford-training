@@ -1,4 +1,4 @@
-/* Minimal custom CSS on top of Tailwind */
+
 
 .stat-card {
   background: white;
@@ -52,7 +52,7 @@ tbody{
 }
 
 .error {
-  color: #dc2626; /* red-600 */
+  color: #dc2626; 
   font-size: 0.875rem;
   margin-top: 4px;
 }

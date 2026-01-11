@@ -1,4 +1,4 @@
-// Insurance Plans
+
 const plans = [
   { name: "Health Insurance", base: 3000, coverage: "Up to 10L" },
   { name: "Life Insurance", base: 5000, coverage: "Up to 15L" },
@@ -8,7 +8,7 @@ const plans = [
 
 const customers = [];
 
-// Render Plans
+
 const plansDiv = document.getElementById("plans");
 plans.map(p => {
   plansDiv.innerHTML += `
@@ -28,12 +28,11 @@ plans.map(p => {
     </div>`;
 });
 
-// Coverage Slider
+
 const coverage = document.getElementById("coverage");
 const coverageValue = document.getElementById("coverageValue");
 coverage.oninput = () => coverageValue.textContent = coverage.value;
 
-// Premium Calculation
 function calculatePremium(age, policy, coverage) {
   let base = policy === "Health" ? 3000 : policy === "Life" ? 5000 : 2000;
   let premium = base + (coverage - 1) * 500;
@@ -41,7 +40,7 @@ function calculatePremium(age, policy, coverage) {
   return Math.round(premium);
 }
 
-// Render Table
+
 function renderTable(data) {
   const tbody = document.getElementById("customerTable");
   tbody.innerHTML = "";
@@ -61,7 +60,6 @@ function renderTable(data) {
   document.getElementById("totalPremium").textContent = "₹" + customers.reduce((t, c) => t + c.premium, 0);
 }
 
-// Form Submission
 document.getElementById("customerForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -74,7 +72,6 @@ document.getElementById("customerForm").addEventListener("submit", function (eve
     { id: "policyType", msg: "Policy type is required" }
   ];
 
-  // clear all errors first
   document.querySelectorAll(".error").forEach(err => {
     err.textContent = "";
     err.classList.add("hidden");
@@ -115,7 +112,7 @@ document.getElementById("customerForm").addEventListener("submit", function (eve
   event.target.reset();
   document.getElementById("coverageValue").textContent = "1";
 });
-// Filter & Search
+
 document.getElementById("filterPolicy").addEventListener("change", filterAndSearch);
 document.getElementById("searchName").addEventListener("input", filterAndSearch);
 
