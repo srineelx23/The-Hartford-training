@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insurance Customer Dashboard</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles2.css" />
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- HEADER / HERO -->
+<header class=" text-white px-6 py-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-6">
+
+    <!-- Text Content -->
+    <div class="text-right">
+      <h1 class="text-2xl md:text-3xl font-bold">Hartford Insurance</h1>
+      <p class="text-sm mt-1">It's cheaper to buy ten years early than one minute too late.</p>
+      <button class="header-button bg-white mt-3 px-4 py-2 rounded font-semibold">
+        Get Insurance
+      </button>
+    </div>
+
+    <!-- Logo -->
+    <img
+      src="./photos/screenshot_2025-02-06_7.45.04_am-removebg-preview.png"
+      alt="Hartford Logo"
+      class="h-20 object-contain"
+    />
+
+  </div>
+</header>
+  <!-- STATS -->
+  <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 px-4">
+    <div class="stat-card">
+      <h2 id="totalCustomers">0</h2>
+      <p>Customers</p>
+    </div>
+    <div class="stat-card">
+      <h2>3</h2>
+      <p>Policies</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="totalPremium">₹0</h2>
+      <p>Total Premium</p>
+    </div>
+  </section>
+
+  <!-- INSURANCE PLANS -->
+  <section class="max-w-6xl mx-auto mt-8 px-4">
+    <h2 class="text-2xl font-bold mb-4">Insurance Plans</h2>
+    <div id="plans" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- FORM -->
+  <section class="max-w-6xl mx-auto mt-10 px-4">
+    <h2 class="text-2xl font-bold mb-4">Customer Enquiry</h2>
+    <form id="customerForm" class="bg-white p-6 rounded shadow grid grid-cols-1 md:grid-cols-2 gap-4">
+
+  <!-- Name -->
+  <div>
+    <input type="text" id="name" placeholder="Customer Name" class="input">
+    <p class="error hidden"></p>
+  </div>
+
+  <!-- Age -->
+  <div>
+    <input type="number" id="age" placeholder="Age" class="input">
+    <p class="error hidden"></p>
+  </div>
+
+  <!-- Email -->
+  <div class="md:col-span-2">
+    <input type="email" id="email" placeholder="Email" class="input">
+    <p class="error hidden"></p>
+  </div>
+
+  <!-- Policy -->
+  <div>
+    <select id="policyType" class="input">
+      <option value="">Select Policy</option>
+      <option value="Health">Health</option>
+      <option value="Life">Life</option>
+      <option value="Vehicle">Vehicle</option>
+    </select>
+    <p class="error hidden"></p>
+  </div>
+
+  <!-- Coverage -->
+  <div>
+    <label class="text-sm">Coverage (Lakhs)</label>
+    <input type="range" id="coverage" min="1" max="10" value="1" class="w-full">
+    <span id="coverageValue">1</span>L
+  </div>
+
+  <button class="butn p-3 md:col-span-2">Submit</button>
+</form>
+
+  </section>
+
+  <!-- FILTER + SEARCH -->
+  <section class="max-w-6xl mx-auto mt-10 px-4 mb-10">
+   <div class="flex flex-col md:flex-row gap-4 mb-4">
+
+  <!-- Filter Dropdown -->
+  <select
+    id="filterPolicy"
+    class="input md:w-56"
+  >
+    <option value="All">All Policies</option>
+    <option value="Health">Health</option>
+    <option value="Life">Life</option>
+    <option value="Vehicle">Vehicle</option>
+  </select>
+
+  <!-- Search Input -->
+  <input
+    type="text"
+    id="searchName"
+    placeholder="Search by name"
+    class="input w-full md:flex-1"
+  />
+
+</div>
+
+
+    <!-- TABLE -->
+    <table class="w-full bg-white rounded shadow overflow-hidden">
+      <thead class="">
+        <tr>
+          <th class="p-2">Name</th>
+          <th>Age</th>
+          <th>Policy</th>
+          <th>Coverage</th>
+          <th>Premium</th>
+        </tr>
+      </thead>
+      <tbody id="customerTable"></tbody>
+    </table>
+  </section>
+
+  <!-- JS -->
+  <script src="./script2.js"></script>
+</body>
+</html>

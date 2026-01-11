@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Enquiry & Feedback</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body class="page-bg flex items-center justify-center min-h-screen">
+
+    <div class="form-card">
+        <h1>Insurance Enquiry & Feedback</h1>
+
+     <form class="form" onsubmit="checkelig()">
+        
+    <label>Full Name</label>
+    <input type="text" class="fullName" placeholder="Enter Full Name">
+
+    <label>Email</label>
+    <input type="email" class="email" placeholder="Enter Email">
+
+    <label>Phone Number</label>
+    <input type="number" class="phoneNo" placeholder="Enter Phone Number">
+
+    <label>Request Type</label>
+    <select class="reqType">
+        <option value="" disabled selected hidden>Select from below</option>
+        <option value="pol">Policy Enquiry</option>
+        <option value="claim">Claim Related</option>
+        <option value="feed">Feedback</option>
+    </select>
+
+    <label>Policy Type</label>
+    <select class="polType">
+        <option value="" disabled selected hidden>Select from below</option>
+        <option value="health">Health Insurance</option>
+        <option value="life">Life Insurance</option>
+        <option value="vehicle">Vehicle Insurance</option>
+        <option value="home">Home Insurance</option>
+    </select>
+
+    <label>Message</label>
+    <textarea class="message" rows="4" placeholder="Enter your message"></textarea>
+
+    <label>Rate Your Experience</label>
+    <div class="rating">
+        <label><input type="radio" name="rating" value="1">1</label>
+        <label><input type="radio" name="rating" value="2">2</label>
+        <label><input type="radio" name="rating" value="3">3</label>
+        <label><input type="radio" name="rating" value="4">4</label>
+        <label><input type="radio" name="rating" value="5">5</label>
+    </div>
+
+    <button type="submit">Submit</button>
+    <p class="success"></p>
+</form>
+
+
+    </div>
+<script src="./script1.js"></script>
+</body>
+</html>
