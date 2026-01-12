@@ -7,7 +7,7 @@ function checkelig() {
     });
 
     let successMsg = document.querySelector(".success");
-    successMsg.textContent = "";   // clear old success
+    successMsg.textContent = "";   
 
     let fullname = document.querySelector(".fullName");
     let email = document.querySelector(".email");
@@ -76,7 +76,6 @@ function checkelig() {
         isValid = false;
     }
 
-    /* ✅ TASK REQUIREMENT */
     if (isValid) {
         successMsg.textContent =
             "Thank you! Your enquiry has been successfully submitted.";
