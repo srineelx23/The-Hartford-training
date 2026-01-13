@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="action-source">
+    <button class="action-source" onclick="renderPolicies()">View Policies</button>
+    </div>
+    <div class="policiesList">
+    </div>
+</div>
+<hr>
+<div class="filterPolicies">
+<h2>Select a Filter</h2>
+<select onchange="filterPolicies(this.value)" name="" id="">
+    <option value="">-- Select --</option>
+    <option  value="Health">Health</option>
+    <option  value="Life">Life</option>
+    <option  value="Vehicle">Vehicle</option>
+</select>
+<div class="filteredPolicies">
+</div>
+</div>
+<hr>
+<div class="totalPremium">
+    <h1>Calculate total Premium</h1>
+    <button onclick="calculateTotalPremium()"class="calculate">Total Premium</button>
+    <div class="amount"></div>
+</div>
+<hr>
+<div>
+    <h1>Apply Discount</h1>
+    <div>
+        <button onclick="appDiscount()">Apply Discount</button>
+        <div class="discountedPolicies">
+
+        </div>
+    </div>
+</div>
+<hr>
+<div>
+    <h1>Policy Approval Simulation</h1>
+    <button onclick="approvePolicy()">Approve Policy</button>
+    <div class="result">
+    </div>
+</div>
+<hr>
+
+<div class="purchase-section">
+  <h1>Policy Purchase (Promise Based)</h1>
+
+  <div class="purchase-card">
+    <select id="policySelect">
+      <option value="">-- Select Policy --</option>
+      <option value="Health">Health Insurance</option>
+      <option value="Life">Life Insurance</option>
+      <option value="Vehicle">Vehicle Insurance</option>
+    </select>
+
+    <button onclick="handlePurchase()">Purchase Policy</button>
+
+    <div class="purchase-result"></div>
+  </div>
+</div>
+<hr>
+
+<div class="error-section">
+  <h1>Error Handling Demo</h1>
+
+  <!-- Invalid Policy ID -->
+  <div class="error-card">
+    <h3>Invalid Policy ID</h3>
+    <input type="number" id="policyIdInput" placeholder="Enter Policy ID" />
+    <button onclick="checkPolicyById()">Check Policy</button>
+  </div>
+
+  <!-- API Failure -->
+  <div class="error-card">
+    <h3>API Failure</h3>
+    <button onclick="simulateApiFailure()">Fetch Policies</button>
+  </div>
+
+  <!-- Premium Calculation Error -->
+  <div class="error-card">
+    <h3>Premium Calculation Error</h3>
+    <button onclick="calculateTotalPremium()">Calculate Premium</button>
+    <div class="amount"></div>
+  </div>
+
+  <!-- Error Output -->
+  <div class="error-output"></div>
+</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

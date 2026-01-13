@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f4f6f8, #eef2ff);
+  padding: 20px;
+  color: #1f2937;
+}
+
+h1, h2 {
+  margin-bottom: 12px;
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background-color: #d1d5db;
+}
+
+button {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.container,
+.filterPolicies,
+.totalPremium,
+.discountedPolicies,
+.result {
+  margin-top: 16px;
+}
+
+.action-source {
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 9px 12px;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:hover,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
+
+.policiesList,
+.filteredPolicies,
+.discountedPolicies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.flex-item {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.flex-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.25);
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+}
+
+.flex-item p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.flex-item:first-child {
+  font-weight: bold;
+}
+
+.discountedPolicies .flex-item {
+  border-left-color: #16a34a;
+}
+
+.discountedPolicies .flex-item:hover {
+  box-shadow: 0 14px 30px rgba(22, 163, 74, 0.25);
+}
+
+.amount h1 {
+  margin-top: 12px;
+  color: #16a34a;
+}
+
+.resultdiv {
+  margin-top: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  color: #166534;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: fadeIn 0.4s ease;
+}
+
+
+
+.purchase-section {
+  margin-top: 30px;
+}
+
+.purchase-card {
+  background: #ffffff;
+  padding: 20px;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-card select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+.purchase-card button {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.purchase-result {
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+.purchase-result.loading {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.purchase-result.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.purchase-result.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+
+.error-section {
+  margin-top: 30px;
+}
+
+.error-card {
+  background: #ffffff;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.error-card h3 {
+  margin-bottom: 10px;
+}
+
+.error-card input {
+  padding: 8px;
+  width: 180px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+.error-output {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.error-msg {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.success-msg {
+  background: #dcfce7;
+  color: #166534;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .policiesList,
+  .filteredPolicies,
+  .discountedPolicies {
+    grid-template-columns: 1fr;
+  }
+
+  select {
+    width: 100%;
+  }
+}

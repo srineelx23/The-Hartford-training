@@ -39,7 +39,8 @@ viewPolicies.addEventListener("click",parentHandleClick);
 let policyCard=document.querySelector('.policy-card');
 let deleteBtn=document.querySelector('#deleteBtn');
 
-policyCard.addEventListener('click',()=>{
+policyCard.addEventListener('click',(event)=>{
+    event.stopPropagation();
     showResult("result3", "Navigating to policy details");
 })
 
