@@ -1,0 +1,47 @@
+{
+  "customers": [
+    {
+      "customerId": "C001",
+      "name": "Ravi Kumar",
+      "email": "ravi@gmail.com",
+      "phone": "9876543210",
+      "city": "Hyderabad"
+    },
+    {
+      "customerId": "C002",
+      "name": "Anita Sharma",
+      "email": "anita@gmail.com",
+      "phone": "9123456789",
+      "city": "Bangalore"
+    }
+  ],
+
+  "policies": [
+    {
+      "policyId": "P101",
+      "customerId": "C001",
+      "type": "Health",
+      "premium": 12000,
+      "duration": "1 Year",
+      "status": "Active"
+    },
+    {
+      "policyId": "P102",
+      "customerId": "C002",
+      "type": "Life",
+      "premium": 25000,
+      "duration": "10 Years",
+      "status": "Active"
+    }
+  ],
+
+  "claims": [
+    {
+      "claimId": "CL9001",
+      "policyId": "P101",
+      "amount": 5000,
+      "claimDate": "2025-01-10",
+      "status": "Approved"
+    }
+  ]
+}

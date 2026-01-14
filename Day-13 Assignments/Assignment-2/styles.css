@@ -1,0 +1,15 @@
+/* Task-2 */
+.msg {
+ color: blue;
+ font-size: 20px;
+} 
+/* Task-6 */
+.card {
+ width: 300px;
+ padding: 20px;
+ } 
+
+/*Task-8*/
+.alert {
+ visibility: hidden;
+ }
