@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Banking Dashboard</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1> Online Banking Operations Dashboard</h1>
+    <p>Retail Banking </p>
+  </header>
+
+
+  <section class="controls">
+    <span style="gap:15px;">
+    <input type="text" id="search" placeholder=" Search by Account Holder Name" />
+    <button onclick="sortByBalance()">⬇ Sort by Balance</button>
+    </span>
+    <span id="totalBalance">Total Bank Balance: ₹0</span>
+  </section>
+
+  <section id="loader" class="loader">Loading Accounts...</section>
+
+ 
+  <main class="layout">
+    
+   
+    <section id="accounts" class="accounts"></section>
+
+  
+    <aside class="form-section">
+      <h2> Create New Account</h2>
+
+      <form id="createForm">
+        <label>
+          Account Holder Name
+          <input type="text" id="name" required />
+        </label>
+
+        <label>
+          Email ID
+          <input type="email" id="email" required />
+        </label>
+
+        <label>
+          Branch (City)
+          <input type="text" id="branch" required />
+        </label>
+
+        <button type="submit">Create Account</button>
+      </form>
+    </aside>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

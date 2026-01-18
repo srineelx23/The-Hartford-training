@@ -1,0 +1,293 @@
+:root {
+  --primary: #0f766e;        
+  --primary-dark: #065f46;   
+  --gold: #c9a227;           
+  --bg-main: #f1f5f3;
+  --bg-card: #ffffff;
+  --text-dark: #1f2937;
+  --neutral: #d1d5db;
+  --danger: #b91c1c;
+  --accent: #ecfdf5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-dark);
+}
+
+
+
+header {
+  position: relative;
+  background-image: url("https://t3.ftcdn.net/jpg/05/36/62/62/360_F_536626246_O8ndHiA0gT5uGz1F9HaJXA1Jq9gmH0S6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 40px 24px;
+  text-align: start;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    rgba(15, 118, 110, 0.65); 
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+
+
+.controls {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: var(--accent);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--neutral);
+}
+
+.controls input {
+  flex: 1;
+  max-width: 260px;
+  min-width: 180px;
+  padding: 10px;
+  border: 1px solid var(--neutral);
+  border-radius: 5px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: var(--primary-dark);
+}
+
+#totalBalance {
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+
+
+.loader {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: var(--primary);
+  display: none;
+}
+
+
+
+.layout {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.accounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+
+.card {
+  background: var(--bg-card);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-left: 5px solid var(--neutral);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+
+
+.card:hover {
+  border-left-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+
+.card.negative {
+  border-left-color: var(--danger);
+  background: #fff1f2;
+}
+
+.card.negative:hover {
+  border-left-color: var(--danger);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+
+
+.card button {
+  margin: 6px 4px 0 0;
+  padding: 7px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.deposit {
+  background: #15803d;
+  color: white;
+}
+
+.withdraw {
+  background: #ea580c;
+  color: white;
+}
+
+.history {
+  background: #4f46e5;
+  color: white;
+}
+
+.delete {
+  background: #b91c1c;
+  color: white;
+}
+
+
+.form-section {
+  background: var(--bg-card);
+  padding: 20px 28px 20px 22px;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-top: 6px solid var(--gold);
+}
+
+.form-section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--primary-dark);
+}
+
+
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-section label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-section input {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--neutral);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-section input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.2);
+  outline: none;
+}
+
+.form-section button {
+  margin-top: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+.form-section button:hover {
+  background: var(--primary-dark);
+}
+
+
+
+.status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.status.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.low {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.status.negative {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
