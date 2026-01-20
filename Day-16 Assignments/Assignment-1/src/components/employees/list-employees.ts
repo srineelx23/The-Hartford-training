@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../models/employee.model';
+import { Employee } from '../../app/models/employee.model';
 import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-list-employees',
