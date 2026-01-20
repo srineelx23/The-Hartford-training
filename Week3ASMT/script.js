@@ -191,7 +191,6 @@ function remove(id) {
 }
 
 
-
 function sortByBalance() {
   const sorted = [...accounts].sort((a, b) => b.balance - a.balance);
   render(sorted);

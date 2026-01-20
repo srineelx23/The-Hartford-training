@@ -1,0 +1,84 @@
+<p class="text-xl font-semibold mb-6 text-center text-slate-700">
+  Employees List
+</p>
+
+<div class="flex flex-wrap justify-center gap-8">
+
+  @for (employee of employees; track $index) {
+
+    <div
+  class="w-[380px] min-h-[500px] bg-slate-50 rounded-2xl shadow-lg
+         hover:shadow-2xl hover:-translate-y-2 transition-all duration-300
+         border-l-4 border-teal-600">
+
+
+      <!-- CARD HEADER -->
+       <div class="bg-gradient-to-r from-teal-600 to-teal-500 py-6 rounded-t-2xl">
+        <div class="flex justify-center">
+            <div class="img-top rounded-full overflow-hidden border-4 border-white bg-white">
+                <img [src]="employee.photoPath" alt="{{ employee.name }}">
+            </div>
+        </div>
+       </div>
+
+
+      <!-- BODY -->
+      <div class="px-6 pt-4 pb-6 bg-white rounded-b-2xl">
+
+  <!-- NAME -->
+  <h5 class="text-lg font-semibold text-center text-slate-800">
+    {{ employee.name }}
+  </h5>
+
+  <p class="text-sm text-center text-slate-500 mb-4">
+    {{ employee.department }}
+  </p>
+
+  <!-- DETAILS GRID -->
+  <div class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm">
+
+  <div class="text-slate-500">Gender</div>
+  <div class="text-slate-800 font-medium">{{ employee.gender }}</div>
+
+  <div class="text-slate-500">DOB</div>
+  <div class="text-slate-800 font-medium">
+    {{ employee.dateOfBirth | date:'dd MMM yyyy' }}
+  </div>
+
+  <div class="text-slate-500">Preference</div>
+  <div class="text-slate-800 font-medium">
+    {{ employee.contactPreference }}
+  </div>
+
+  @if (employee.phoneNumber) {
+    <div class="text-slate-500">Phone</div>
+    <div class="text-slate-800 font-medium">
+      {{ employee.phoneNumber }}
+    </div>
+  }
+
+  @if (employee.email) {
+  <div class="text-slate-500">Email</div>
+  <div class="text-slate-800 font-medium break-all">
+    {{ employee.email }}
+  </div>
+}
+
+</div>
+
+
+  <!-- STATUS -->
+  <div class="mt-4 flex justify-center">
+   <span
+  class="px-4 py-1 rounded-full text-xs font-semibold tracking-wide"
+  [class.bg-green-100]="employee.isActive"
+  [class.text-green-700]="employee.isActive"
+  [class.bg-red-100]="!employee.isActive"
+  [class.text-red-700]="!employee.isActive">
+  {{ employee.isActive ? 'ACTIVE' : 'INACTIVE' }}
+</span>
+  </div>
+</div>
+</div>
+}
+</div>
