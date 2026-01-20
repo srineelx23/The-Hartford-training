@@ -21,6 +21,7 @@ export class UserComponent {
     else { 
       this.user.id = Date.now(); // simple unique id
       this.users.push({ ...this.user });
+      console.log(this.user);
     }
     this.resetForm();
   } 

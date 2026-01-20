@@ -1,0 +1,44 @@
+<div class="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 mt-5">
+
+  <!-- HEADER -->
+  <h3 class="text-xl font-semibold text-slate-800 mb-4 text-center">
+    Message Service Demo
+  </h3>
+
+  <!-- INPUT SECTION -->
+  <div class="flex gap-3 mb-6">
+    <input
+      type="text"
+      [(ngModel)]="message"
+      placeholder="Type your message..."
+      class="flex-1 px-4 py-2 border rounded-lg
+             focus:outline-none focus:ring-2 focus:ring-teal-500
+             focus:border-teal-500" />
+
+    <button
+      (click)="addMessage()"
+      class="px-5 py-2 rounded-lg bg-teal-600 text-white
+             font-semibold hover:bg-teal-700 transition">
+      Add
+    </button>
+  </div>
+
+  <!-- MESSAGE LIST -->
+  @if (messages.length > 0) {
+    <ul class="space-y-3">
+      @for (msg of messages; track $index) {
+        <li
+          class="px-4 py-2 bg-slate-100 rounded-lg
+                 text-slate-700 shadow-sm">
+          {{ msg }}
+        </li>
+      }
+    </ul>
+  } @else {
+    <!-- EMPTY STATE -->
+    <p class="text-center text-slate-500 italic">
+      No messages yet. Add one above 👆
+    </p>
+  }
+
+</div>

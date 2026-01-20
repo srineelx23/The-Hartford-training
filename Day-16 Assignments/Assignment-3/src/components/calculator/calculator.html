@@ -1,0 +1,39 @@
+<div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg mt-10">
+
+  <h3 class="text-xl font-semibold text-center text-slate-800 mb-6">
+    Calculator Service Demo
+  </h3>
+
+  <!-- INPUTS -->
+  <div class="space-y-4 mb-6">
+    <input
+      type="number"
+      [(ngModel)]="num1"
+      placeholder="Enter first number"
+      class="w-full px-4 py-2 border rounded-md
+             focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+
+    <input
+      type="number"
+      [(ngModel)]="num2"
+      placeholder="Enter second number"
+      class="w-full px-4 py-2 border rounded-md
+             focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="grid grid-cols-3 gap-3 mb-6">
+    <button (click)="add()" class="calc-btn">+</button>
+    <button (click)="subtract()" class="calc-btn">−</button>
+    <button (click)="multiply()" class="calc-btn">×</button>
+    <button (click)="divide()" class="calc-btn">÷</button>
+    <button (click)="modulus()" class="calc-btn">%</button>
+  </div>
+
+  <!-- RESULT -->
+  <div class="text-center">
+    <p class="text-slate-600 text-sm">Result</p>
+    <p class="text-2xl font-bold text-teal-600">{{ result }}</p>
+  </div>
+
+</div>
