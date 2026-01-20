@@ -1,0 +1,23 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.navbar{
+    display:flex;
+    padding:20px;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width:300px;
+}
+.pages{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+input{
+    padding:10px;
+}

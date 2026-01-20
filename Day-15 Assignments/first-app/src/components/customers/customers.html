@@ -1,0 +1,14 @@
+<h1>This is the Customers List</h1>
+<div class="card">
+        @for(customer of customerslist; track customer.id){
+            <p>{{customer.name}}</p>
+        }
+</div>
+<div [contentEditable]="isEditable">
+    hello
+</div>
+<button (click)="greet()">Show Message</button>
+<div (mouseover)="starthover()" class="hoveringeffect">Display the message{{secretMessage}}</div>
+<h1>Testing does products variables are also imported</h1>
+<!-- <h1>{{productname}}</h1> -->
+<app-products name="Simran"></app-products>

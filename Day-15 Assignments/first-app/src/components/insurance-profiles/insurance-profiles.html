@@ -1,0 +1,63 @@
+<div class="rut">
+    <h1>Get a Quote</h1>
+    <div class="card-profiles">
+
+  <div
+    class="holographic-card"
+    [class.selected]="selectedType === 'auto'"
+    (click)="selectCard('auto')">
+
+    <div class="img-prog">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4NiSuJldkqEmiI4msVEtqIJQhGPKW6pkuNw&s">
+    </div>
+    <div class="details">
+      <h3>Auto</h3>
+    </div>
+  </div>
+
+  <div
+    class="holographic-card"
+    [class.selected]="selectedType === 'auto-home'"
+    (click)="selectCard('auto-home')">
+
+    <div class="offer">
+      <h4>Bundle & Save</h4>
+    </div>
+    <div class="img-prog">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT97PdK01C7GOZosXbsP381OI_AQN9a6jlMw&s">
+    </div>
+    <div class="details">
+      <h3>Auto + Home</h3>
+    </div>
+  </div>
+
+  <div
+    class="holographic-card"
+    [class.selected]="selectedType === 'home'"
+    (click)="selectCard('home')">
+
+    <div class="img-prog">
+      <img src="https://static.thenounproject.com/png/3574480-200.png">
+    </div>
+    <div class="details">
+      <h3>Home</h3>
+    </div>
+  </div>
+
+  <div
+    class="holographic-card"
+    [class.selected]="selectedType === 'business'"
+    (click)="selectCard('business')">
+
+    <div class="img-prog">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLuFkEmoRNXSB_ruXnH1JjL0tebIgFrvHuQ&s">
+    </div>
+    <div class="details">
+      <h3>Business</h3>
+    </div>
+  </div>
+
+</div>
+
+    <p><b>Exclusive</b> benefits and discount for AARP members</p>
+</div>

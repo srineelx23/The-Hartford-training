@@ -1,0 +1,34 @@
+.welcome{
+    /* text-align: center; */
+    background-color:#ffffff79;
+    padding:20px;
+    display:flex;
+    justify-content: space-between;
+    /* gap:20px;    */
+    margin:20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    background-color: rgb(228, 200, 165);
+}
+.top{
+    width:50%;
+    text-align:start;
+}
+img{
+    width:100%;
+    height: 100%;
+}
+.imgside{
+    width:30%;
+    text-align:left;
+    /* border-radius: 20px; */
+}
+.welmsg{
+    margin-bottom:20px;
+}
+.quote{
+    font-size:50px;
+    margin-bottom: 20px;
+}
+.txt{
+    font-size: 25px;
+}
