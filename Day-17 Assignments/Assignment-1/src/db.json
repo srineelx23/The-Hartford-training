@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "id": "1",
+      "name": "Aarav",
+      "email": "aarav@gmail.com",
+      "active": true
+    },
+    {
+      "id": null,
+      "name": "srineelx23",
+      "email": "srineel.04@gmail.com",
+      "active": true
+    },
+    {
+      "id": "522e",
+      "name": "srineel",
+      "email": "srineel.04@gmail.com",
+      "active": false
+    },
+    {
+      "id": "28f9",
+      "name": "Gudipalli Srineel Reddy",
+      "email": "test1@mail.com",
+      "active": true
+    }
+  ]
+}
