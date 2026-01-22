@@ -1,0 +1,26 @@
+.star {
+  width: 42px;
+  height: 42px;
+  background: #e5e7eb;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.star:hover {
+  transform: scale(1.15);
+}
+
+.star.filled {
+  background: linear-gradient(145deg, #facc15, #f59e0b);
+  filter: drop-shadow(0 4px 6px rgba(250, 204, 21, 0.6));
+}

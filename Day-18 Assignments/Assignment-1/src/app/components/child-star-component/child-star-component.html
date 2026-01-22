@@ -1,0 +1,13 @@
+<div
+  class="flex gap-3 rounded-xl bg-white px-6 py-4 shadow-md"
+  (mouseleave)="onLeave()"
+>
+  @for (star of [1,2,3,4,5]; track star) {
+    <div
+      class="star transition-all duration-200 ease-out cursor-pointer"
+      (mouseenter)="onHover(star)"
+      (click)="colorStar(star)"
+      [class.filled]="isFilled(star)"
+    ></div>
+  }
+</div>
