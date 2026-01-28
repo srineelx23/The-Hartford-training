@@ -1,0 +1,19 @@
+<p>Home works</p>
+<h1>This is my home page</h1>
+<a routerLink="/about" [queryParams]="{id:101, name:'TV'}">Go to About Page</a>
+
+<p>Dynamic Query Params Example</p>
+<a
+routerLink="/about"
+[queryParams]="{ id: prodData[1].id, name: prodData[1].name }"
+>
+Go to About Page</a
+>
+<br />
+
+<p>Using Signals</p>
+<a
+routerLink="/about"
+[queryParams]="{ id: product().id, name: product().name }"
+>Get a Product</a
+>
