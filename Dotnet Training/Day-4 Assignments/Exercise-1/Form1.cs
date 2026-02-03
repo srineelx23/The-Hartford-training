@@ -34,7 +34,11 @@ namespace Exercise_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string str = "Name: " + textBox1.Text;
+            str += "\nFather's Name: " + textBox2.Text;
+            str += "\nDate Of Birth: " + dateTimePicker1.Text;
+            str += "\nPreferences in Life: " + comboBox1.Text;
+            MessageBox.Show(str);
         }
     }
 }
