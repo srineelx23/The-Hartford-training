@@ -77,6 +77,8 @@ namespace Weekly_Assignment_7.Controllers
         [HttpPost]
         public async Task<ActionResult<Grade>> PostGrade(Grade grade)
         {
+            int id=_context.Grades.Any() ? _context.Grades.Max(g => g.GradeId) + 1 : 100;
+            grade.GradeId = id;
             _context.Grades.Add(grade);
             await _context.SaveChangesAsync();
 

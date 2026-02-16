@@ -1,4 +1,5 @@
-﻿namespace Weekly_Assignment_7.Models
+﻿//using Weekly_Assignment_7.DTOs;
+namespace Weekly_Assignment_7.Models
 {
     public class Grade
     {
