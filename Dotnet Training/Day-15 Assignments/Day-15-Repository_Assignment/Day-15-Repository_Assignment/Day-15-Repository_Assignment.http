@@ -1,0 +1,6 @@
+@Day_15_Repository_Assignment_HostAddress = http://localhost:5032
+
+GET {{Day_15_Repository_Assignment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
