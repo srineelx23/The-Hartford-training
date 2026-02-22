@@ -3,17 +3,21 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using StudentMgmt.Data;
+
+using StudentMgmt.Infrastructure.Persistence;
 
 #nullable disable
 
 namespace StudentMgmt.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    partial class StudentContextModelSnapshot : ModelSnapshot
+    [Migration("20260222042155_admin_added_loginprocesss_started")]
+    partial class admin_added_loginprocesss_started
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +25,27 @@ namespace StudentMgmt.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("StudentMgmt.Models.Admin", b =>
+                {
+                    b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminId");
+
+                    b.ToTable("Admins");
+                });
 
             modelBuilder.Entity("StudentMgmt.Models.Student", b =>
                 {
@@ -32,6 +57,10 @@ namespace StudentMgmt.Migrations
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateOnly>("EnrollmentDate")
                         .HasColumnType("date");
@@ -48,6 +77,10 @@ namespace StudentMgmt.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("StudentId");
 
                     b.ToTable("Students");
@@ -55,11 +88,11 @@ namespace StudentMgmt.Migrations
 
             modelBuilder.Entity("StudentMgmt.Models.StudentFeedback", b =>
                 {
-                    b.Property<int>("FeedBackId")
+                    b.Property<int>("FeedbackId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeedBackId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeedbackId"));
 
                     b.Property<string>("Feedback")
                         .IsRequired()
@@ -74,13 +107,16 @@ namespace StudentMgmt.Migrations
                     b.Property<int>("TrainerId")
                         .HasColumnType("int");
 
-                    b.HasKey("FeedBackId");
+                    b.Property<string>("TrainerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FeedbackId");
 
                     b.HasIndex("StudentId");
 
                     b.HasIndex("TrainerId");
 
-                    b.ToTable("StudentFeedbacks");
+                    b.ToTable("StudentFeedback");
                 });
 
             modelBuilder.Entity("StudentMgmt.Models.StudyMaterial", b =>
@@ -91,19 +127,19 @@ namespace StudentMgmt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudyMaterialId"));
 
-                    b.Property<DateOnly>("LastModified")
-                        .HasColumnType("date");
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TrainerId")
+                    b.Property<int?>("TrainerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UploadedPath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("StudyMaterialId");
 
@@ -120,6 +156,10 @@ namespace StudentMgmt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrainerId"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -132,6 +172,10 @@ namespace StudentMgmt.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("TrainerId");
 
                     b.ToTable("Trainers");
@@ -140,13 +184,13 @@ namespace StudentMgmt.Migrations
             modelBuilder.Entity("StudentMgmt.Models.StudentFeedback", b =>
                 {
                     b.HasOne("StudentMgmt.Models.Student", "Student")
-                        .WithMany("StudentFeedbacks")
+                        .WithMany("Feedbacks")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StudentMgmt.Models.Trainer", "Trainer")
-                        .WithMany()
+                        .WithMany("Feedbacks")
                         .HasForeignKey("TrainerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -159,17 +203,23 @@ namespace StudentMgmt.Migrations
             modelBuilder.Entity("StudentMgmt.Models.StudyMaterial", b =>
                 {
                     b.HasOne("StudentMgmt.Models.Trainer", "Trainer")
-                        .WithMany()
+                        .WithMany("StudyMaterials")
                         .HasForeignKey("TrainerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Trainer");
                 });
 
             modelBuilder.Entity("StudentMgmt.Models.Student", b =>
                 {
-                    b.Navigation("StudentFeedbacks");
+                    b.Navigation("Feedbacks");
+                });
+
+            modelBuilder.Entity("StudentMgmt.Models.Trainer", b =>
+                {
+                    b.Navigation("Feedbacks");
+
+                    b.Navigation("StudyMaterials");
                 });
 #pragma warning restore 612, 618
         }

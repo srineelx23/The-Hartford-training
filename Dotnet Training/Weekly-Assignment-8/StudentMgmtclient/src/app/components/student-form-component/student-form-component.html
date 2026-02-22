@@ -1,0 +1,85 @@
+<div class="container">
+    <!-- Left Column: Student List Table -->
+    <div class="left-column">
+        <div class="card">
+            <div class="card-header">
+                <h2>Student List</h2>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (student of studentService.students(); track $index) {
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ student.firstName }} {{ student.lastName }}</td>
+                            <td>{{ student.age }}</td>
+                            <td>{{ student.gender }}</td>
+                            <td>{{ student.enrollmentDate | date }}</td>
+                        </tr>
+                        } @empty {
+                        <tr class="empty-row">
+                            <td colspan="6">No students to display</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Student Form -->
+    <div class="right-column">
+        <div class="card form-card">
+            <div class="card-header">
+                <h2>Enroll Student</h2>
+            </div>
+            <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required [(ngModel)]="newstudent.firstName" name="firstName"
+                        placeholder="Enter first name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required [(ngModel)]="newstudent.lastName" name="lastName"
+                        placeholder="Enter last name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" required [(ngModel)]="newstudent.age" name="age" placeholder="Age" />
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required [(ngModel)]="newstudent.gender" name="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollmentDate">Enrollment Date</label>
+                    <input type="date" id="enrollmentDate" required [(ngModel)]="newstudent.enrollmentDate"
+                        name="enrollmentDate" />
+                </div>
+
+                <button type="submit" [disabled]="!studentForm.form.valid" class="submit-btn">
+                    Enroll Student
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

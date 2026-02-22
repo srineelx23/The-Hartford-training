@@ -1,0 +1,17 @@
+﻿using StudentMgmt.Application.DTOs.StudentDTOs;
+using StudentMgmt.Domain.Entities;
+using StudentMgmt.DTOs.StudentDTOs;
+
+namespace StudentMgmt.Application.Interfaces.Repositories
+{
+    public interface ITrainerRepository
+    {
+        public Task<StudentReadDTO> GetStudentByIdAsync(int trainerId);
+        public Task<Trainer> GetTrainerByIdAsync(int trainerId);
+        public Task<Trainer> RegisterTrainerAsync(Trainer trainer);
+        public Task<Student> UpdateStudentDetailsAsync(int studentId, UpdateStudentDTO updatedStudent);
+        public Task<StudentFeedback> AddStudentFeedbackAsync(StudentFeedback feedback);
+        public Task<IEnumerable<StudentReadDTO>> GetAllStudentsAsync();
+        public Task<Student> DeleteStudentByIdAsync(int studentId);
+    }
+}
