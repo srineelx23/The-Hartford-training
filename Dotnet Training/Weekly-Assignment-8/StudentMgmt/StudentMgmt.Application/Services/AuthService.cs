@@ -135,5 +135,33 @@ namespace StudentMgmt.Application.Services
                 admin.Email,
                 "Admin");
         }
+
+        public async Task UpdateStudentPassword(string email, string password)
+        {
+            if (email == null) throw new ArgumentNullException("enter valid email");
+            else if (password == null) throw new ArgumentNullException("Enter valid password");
+            else
+            {
+                var res=await _authRepository.StudentEmailExists(email);
+                if(res==true)
+                {
+                    var fetchedStudent=await _authRepository.GetStudentByEmail(email);
+                    fetchedStudent.Password=_studentHasher.HashPassword(fetchedStudent,password);
+                    await _authRepository.UpdateStudentPassword(fetchedStudent);
+                }
+            }
+        }
+
+        public async Task UpdateTrainerPassword(string email,string password)
+        {
+            if (email == null) throw new ArgumentException("enter valid student email");
+            else if(password == null) throw new ArgumentNullException("enter valid Password");
+            else
+            {
+                var fetchedTrainer=await _authRepository.GetTrainerByEmail(email);
+                fetchedTrainer.password = _trainerHasher.HashPassword(fetchedTrainer,password);
+                await _authRepository.UpdateTrainerPassword(fetchedTrainer);
+            }
+        }
     }
 }

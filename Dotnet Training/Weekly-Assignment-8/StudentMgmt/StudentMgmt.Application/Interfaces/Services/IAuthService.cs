@@ -14,5 +14,7 @@ namespace StudentMgmt.Application.Interfaces.Services
         Task<AuthResultDto> LoginStudent(LoginDto dto);
         Task<AuthResultDto> LoginTrainer(LoginDto dto);
         Task<AuthResultDto> LoginAdmin(LoginDto dto);
+        Task UpdateStudentPassword(string email,string password);
+        Task UpdateTrainerPassword(string email,string password);
     }
 }

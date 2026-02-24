@@ -65,5 +65,20 @@ namespace StudentMgmt.Infrastructure.Repositories
         public async Task<Admin?> GetAdminByEmail(string email)
             => await _context.Admins
                 .FirstOrDefaultAsync(a => a.Email == email);
+        public async Task<Student> UpdateStudentPassword(Student student)
+        {
+            var res=await GetStudentByEmail(student.Email);
+            res.Password=student.Password;
+            await _context.SaveChangesAsync();
+            return res;
+        }
+
+        public async Task<Trainer> UpdateTrainerPassword(Trainer trainer)
+        {
+            var res=await GetTrainerByEmail(trainer.Email);
+            res.password = trainer.password;
+            await _context.SaveChangesAsync();
+            return res;
+        }
     }
 }

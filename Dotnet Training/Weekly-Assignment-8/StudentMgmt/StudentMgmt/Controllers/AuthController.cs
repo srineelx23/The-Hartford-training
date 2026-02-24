@@ -2,6 +2,7 @@
 using StudentMgmt.Domain.Entities;
 using StudentMgmt.Application.Interfaces.Services;
 using static StudentMgmt.Application.DTOs.RegisterLoginDTO.AuthDto;
+using System.Reflection.Metadata.Ecma335;
 
 namespace StudentMgmt.API.Controllers
 {
@@ -61,6 +62,31 @@ namespace StudentMgmt.API.Controllers
             var result = await _authService.LoginAdmin(dto);
             return Ok(result);
         }
-
+        [HttpPut("student/forgotpassword")]
+        public async Task<IActionResult> UpdateStudentPassword(string email,string password)
+        {
+            try
+            {
+                await _authService.UpdateStudentPassword(email, password);
+                return Ok("Student Updated successfully");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPut("trainer/forgotpassword")]
+        public async Task<IActionResult> UpdateTrainerPassword(string email,string password)
+        {
+            try
+            {
+                await _authService.UpdateTrainerPassword(email, password);
+                return Ok("Trainer Updated succesfully");
+            }
+            catch(Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+        }
     }
 }

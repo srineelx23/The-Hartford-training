@@ -7,6 +7,7 @@ import { AdminLogin } from './components/admin-login/admin-login';
 import { StudentDashboard } from './components/student-dashboard/student-dashboard';
 import { TrainerDashboard } from './components/trainer-dashboard/trainer-dashboard';
 import { AdminDashboard } from './components/admin-dashboard/admin-dashboard';
+import { ForgotPassword } from './components/forgot-password/forgot-password';
 import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
     { path: 'register-student', component: RegisterStudent },
     { path: 'register-trainer', component: RegisterTrainer },
     { path: 'login', component: Login },
+    { path: 'forgot-password', component: ForgotPassword },
     { path: 'admin-panel', component: AdminLogin },
     { path: 'student-dashboard', component: StudentDashboard, canActivate: [authGuard] },
     { path: 'trainer-dashboard', component: TrainerDashboard, canActivate: [authGuard] },

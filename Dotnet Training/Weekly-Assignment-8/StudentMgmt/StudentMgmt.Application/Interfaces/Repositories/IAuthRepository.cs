@@ -22,5 +22,7 @@ namespace StudentMgmt.Application.Interfaces.Repositories
         Task<Student?> GetStudentByEmail(string email);
         Task<Trainer?> GetTrainerByEmail(string email);
         Task<Admin?> GetAdminByEmail(string email);
+        Task<Student?> UpdateStudentPassword(Student student);
+        Task<Trainer?> UpdateTrainerPassword(Trainer trainer);  
     }
 }

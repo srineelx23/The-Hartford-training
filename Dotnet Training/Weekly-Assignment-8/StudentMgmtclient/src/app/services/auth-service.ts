@@ -71,4 +71,9 @@ export class AuthService {
         sessionStorage.removeItem('username');
         sessionStorage.removeItem('userId');
     }
+
+    forgotPassword(role: string, email: string, password: string): Observable<any> {
+        const endpoint = `${this.authUrl}/${role.toLowerCase()}/forgotpassword?email=${email}&password=${password}`;
+        return this.http.put(endpoint, {}, { responseType: 'text' });
+    }
 }
